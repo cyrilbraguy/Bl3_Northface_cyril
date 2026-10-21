@@ -40,8 +40,8 @@ In this project, you'll work with a corpus of item descriptions from The North F
 
 👉👉<a href="https://www.kaggle.com/cclark/product-item-data?select=sample-data.csv" target="_blank"> The North Face product catalog</a> 👈👈
   
-  
-# 0. load and preprocessing of textual data
+# Realisation of the project  
+## 0. load and preprocessing of textual data
 
 - First, after a load of the NorthFace catalog, some preprocessings to clean the corpus is performed :
   - load of data in categories,
@@ -51,14 +51,14 @@ For this step, `pandas` and `spacy` are used.
 
 - Then, text is encoded with **TF-IDF transformation** ( done with scikit learn's `TFIDFVectorizer`) 
 
-# 1. Group of products with similar descriptions  
+## 1. Group of products with similar descriptions  
   
 For this part, you'll have to train a **clustering model** that will create groups of products for which the descriptions are "close" to each other. 
 - You can use `DBSCAN` to make some clustering on the TF-IDF matrix. When dealing with texts, the distance metric to be used is "cosine" instead of "euclidean". You have to find some values for `eps` and `min_samples` that allow to get 10-20 clusters and not too many outliers.
 - You can display a `wordcloud` for each cluster to analyze the results and see if the groups contain different words.
   
 
-# 2. Recommender system 
+## 2. Recommender system 
   
 Then, you can use the cluster ids from part 1 to build a **recommender system**. The aim is to be able to suggest to a user some products that are similar to the ones he is interested in. To do this, we will consider that products belonging to the same cluster are similar.
 
@@ -66,7 +66,7 @@ Then, you can use the cluster ids from part 1 to build a **recommender system**.
 - Use python's `input()` function to allow the user to choose a product and perform some suggestions of similar items
   
   
-# 3. Topic modeling  
+## 3. Topic modeling  
   
 *This part is independant from the two others.*
 
